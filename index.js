@@ -1,23 +1,34 @@
 class cliente {
     name;
     cpf;
+}
+
+class contaC {
     agencia;
     saldo;
-    rg;
+
+    sacar(valor) {
+        if (this.saldo >= valor) {
+            this.saldo -= valor;
+        }
+    }
 }
 
 const client = new cliente();
 const client2 = new cliente();
 client.name = 'marcus';
 client.cpf = 2321323213;
-client.agencia = 1001;
-client.saldo = 0;
-client.rg = 3232434;
 
 client2.name = 'alice';
 client2.cpf = 4324324;
-client2.agencia = 1001;
-client2.saldo = 0;
-client2.rg = 2343242;
 
-console.log(client, client2);
+const contaMateus = new contaC();
+contaMateus.agencia = 1001;
+contaMateus.saldo = 0;
+
+console.log(client);
+console.log(client2);
+console.log(contaMateus);
+contaMateus.saldo = 100;
+contaMateus.sacar(50);
+console.log(contaMateus.saldo);
