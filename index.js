@@ -11,13 +11,15 @@ class contaC {
     sacar(valor) {
         if (this._saldo >= valor) {
             this._saldo -= valor;
+            return valor;
         }
     }
 
     depositar(valor) {
-        if (valor > 0) {
-            this._saldo += valor;
+        if (valor <= 0) {
+            return;
         }
+        this._saldo += valor;
     }
 }
 
@@ -36,5 +38,6 @@ contaMateus.depositar(100);
 contaMateus.depositar(200);
 contaMateus.depositar(300);
 
-contaMateus.sacar(8);
+const sacado = contaMateus.sacar(8);
+console.log(sacado);
 console.log(contaMateus);
