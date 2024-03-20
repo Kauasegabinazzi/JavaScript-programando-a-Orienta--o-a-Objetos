@@ -5,11 +5,18 @@ class cliente {
 
 class contaC {
     agencia;
-    saldo;
+    // #saldo = 0;
+    _saldo = 0;
 
     sacar(valor) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
+        if (this._saldo >= valor) {
+            this._saldo -= valor;
+        }
+    }
+
+    depositar(valor) {
+        if (valor > 0) {
+            this._saldo += valor;
         }
     }
 }
@@ -24,11 +31,10 @@ client2.cpf = 4324324;
 
 const contaMateus = new contaC();
 contaMateus.agencia = 1001;
-contaMateus.saldo = 0;
 
-console.log(client);
-console.log(client2);
+contaMateus.depositar(100);
+contaMateus.depositar(200);
+contaMateus.depositar(300);
+
+contaMateus.sacar(8);
 console.log(contaMateus);
-contaMateus.saldo = 100;
-contaMateus.sacar(50);
-console.log(contaMateus.saldo);
