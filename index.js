@@ -11,11 +11,19 @@ client2.cpf = 4324324;
 
 const contaMateus = new ContaCorrente();
 contaMateus.agencia = 1001;
+contaMateus.cliente = client;
 
-contaMateus.depositar(100);
-contaMateus.depositar(200);
-contaMateus.depositar(300);
+contaMateus.depositar(600);
 
-const sacado = contaMateus.sacar(8);
-console.log(sacado);
+// const sacado = contaMateus.sacar(8);
+// console.log(sacado);
+// console.log(contaMateus);
+
+
+const contaAlice = new ContaCorrente();
+contaAlice.cliente = client2;
+contaAlice.agencia = 1002;
+
+contaMateus.tranferir(150, contaAlice);
+console.log(contaAlice);
 console.log(contaMateus);
