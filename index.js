@@ -24,6 +24,7 @@ const contaAlice = new ContaCorrente();
 contaAlice.cliente = client2;
 contaAlice.agencia = 1002;
 
-contaMateus.tranferir(150, contaAlice);
+let valor = 150;
+contaMateus.tranferir(valor, contaAlice);
 console.log(contaAlice);
-console.log(contaMateus);
+console.log('valor: ', valor);
