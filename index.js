@@ -1,37 +1,15 @@
-class cliente {
-    name;
-    cpf;
-}
+import { Cliente } from './Client.js';
+import { ContaCorrente } from './ContaCorrente.js';
 
-class contaC {
-    agencia;
-    // #saldo = 0;
-    _saldo = 0;
-
-    sacar(valor) {
-        if (this._saldo >= valor) {
-            this._saldo -= valor;
-            return valor;
-        }
-    }
-
-    depositar(valor) {
-        if (valor <= 0) {
-            return;
-        }
-        this._saldo += valor;
-    }
-}
-
-const client = new cliente();
-const client2 = new cliente();
+const client = new Cliente();
+const client2 = new Cliente();
 client.name = 'marcus';
 client.cpf = 2321323213;
 
 client2.name = 'alice';
 client2.cpf = 4324324;
 
-const contaMateus = new contaC();
+const contaMateus = new ContaCorrente();
 contaMateus.agencia = 1001;
 
 contaMateus.depositar(100);
