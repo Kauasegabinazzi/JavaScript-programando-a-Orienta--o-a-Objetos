@@ -21,12 +21,12 @@ contaMateus.depositar(600);
 
 
 const contaAlice = new ContaCorrente();
-contaAlice.cliente = client2;
+contaAlice.cliente = new Cliente();
+// contaAlice.cliente = null;
+contaAlice.cliente.nome = 'alice';
+contaAlice.cliente.cpf = 4234324;
 contaAlice.agencia = 1002;
 
 let valor = 150;
 contaMateus.tranferir(valor, contaAlice);
 console.log(contaAlice);
-console.log('valor: ', valor);
-
-//teste // teste // ffdsdfdsf // ffjkfsd // gjfkksf//fdsfdsfsdf
