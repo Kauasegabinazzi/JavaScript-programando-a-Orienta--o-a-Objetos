@@ -10,15 +10,20 @@ export class ContaCorrente {
         }
     }
 
+    // #saldo = 0;
+    _saldo = 0;
+
     get cliente() {
         return this._cliente;
     }
 
-    // #saldo = 0;
-    _saldo = 0;
-
     get saldo() {
         return this._saldo;
+    }
+
+    constructor(cliente, agencia) {
+        this.agencia = agencia;
+        this.cliente = cliente;
     }
 
     sacar(valor) {
