@@ -14,14 +14,3 @@ let valor = 150;
 contaMateus.tranferir(valor, contaAlice);
 
 console.log(ContaCorrente.numberCount);
-
-
-// contaMateus.agencia = 1001;
-// contaMateus.cliente = client;
-// console.log(client2.cpf);
-// const sacado = contaMateus.sacar(8);
-// console.log(sacado);
-// console.log(contaMateus);
-// contaAlice.cliente = null;
-// contaAlice.cliente.name = 'alice';
-// contaAlice.cliente.cpf = 4234324;
